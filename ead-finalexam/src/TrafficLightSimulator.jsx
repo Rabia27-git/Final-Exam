@@ -28,7 +28,8 @@ function TrafficLightSimulator() {
         borderRadius:"50%",
         marginTop:"15px",
         marginLeft:"20px",
-        backgroundColor:"red"
+        backgroundColor:"rgb(228, 48, 48)",
+        boxShadow:"0px 0px 10px red"
     }
 
     const yellowColorStyles={
@@ -37,7 +38,8 @@ function TrafficLightSimulator() {
         borderRadius:"50%",
         marginTop:"15px",
         marginLeft:"20px",
-        backgroundColor:"yellow"
+        backgroundColor:"rgb(241, 241, 48)",
+        boxShadow:"0px 0px 10px yellow"
     }
 
     const greenColorStyles={
@@ -46,7 +48,8 @@ function TrafficLightSimulator() {
         borderRadius:"50%",
         marginTop:"15px",
         marginLeft:"20px",
-        backgroundColor:"green"
+        backgroundColor:"rgb(15, 145, 15)",
+        boxShadow:"0px 0px 10px green"
     }
 
 
