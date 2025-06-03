@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 function TrafficLightSimulator() {
 
+    // CSS
     const boxStyles={
         marginTop:"50px",
         marginLeft:"500px",
@@ -20,6 +21,42 @@ function TrafficLightSimulator() {
         marginLeft:"20px",
         backgroundColor:"rgb(117, 106, 106)"
     }
+
+    const [light,setLight]=useState("red")
+    const [classColor,setClassColor]=useState("redColorStyles")
+
+    useEffect(()=>{
+        const intervalId=setInterval(()=>{
+
+            if(light==="red"){
+                setLight("yellow")
+            }
+            else if(light==="yellow"){
+                setLight("green")
+            }
+            else if(light==="green"){
+                setLight("red")
+            }
+            
+        },3000)
+
+        return ()=>clearInterval(intervalId)
+
+    },[light,classColor])
+
+    useEffect(()=>{
+
+        if(light==="red"){
+            setClassColor("redColorStyles")
+        }
+        else if(light==="yellow"){
+            setClassColor("yellowColorStyles")
+        }
+        else if(light==="green"){
+            setClassColor("greenColorStyles")
+        }
+
+    },[light])
 
   return (
     <>
